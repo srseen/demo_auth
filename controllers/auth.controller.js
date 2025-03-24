@@ -4,8 +4,7 @@ const bcrypt = require("bcryptjs");
 
 exports.register = async (req, res) => {
   try {
-    //code
-    // 1.CheckUser
+    // 1.Check User
     const { name, password } = req.body;
     var user = await User.findOne({ name });
     if (user) {
@@ -55,7 +54,6 @@ exports.login = async (req, res) => {
       res.json({ token, payload });
     });
   } catch (err) {
-    //code
     console.log(err);
     res.status(500).send("Server Error");
   }
