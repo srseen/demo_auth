@@ -6,20 +6,23 @@ const {
   create,
   update,
   remove,
-} = require("../Controllers/product.controller");
+} = require("../controllers/product.controller");
+
+// import middleware
+const { auth } = require("../middleware/auth");
 
 // get all products
-router.get("/product", read);
+router.get("/product", auth, read);
 
 // get product by id
-router.get("/product/:id", readById);
+router.get("/product/:id", auth, readById);
 
 // create product
-router.post("/product", create);
+router.post("/product", auth, create);
 
 // update product
-router.put("/product/:id", update);
+router.put("/product/:id", auth, update);
 
 // delete product
-router.delete("/product/:id", remove);
+router.delete("/product/:id", auth, remove);
 module.exports = router;
