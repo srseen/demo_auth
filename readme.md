@@ -1,16 +1,19 @@
-# Node.js + Express.js Auth ด้วย JSON WEB Token (JWT)
-
-# **การ clone เพื่อใช้งาน**
-
-```jsx
-git clone https://github.com/srseen/demo-auth-node-express-mongodb.git
-```
+# **การใช้งาน**
 
 ```jsx
 npm install
 ```
 
+- เปลี่ยน env.example เป็น .env
+
+```
+PORT=
+MONGODB_URI=
+```
+
 ---
+
+# Node.js + Express.js Auth ด้วย JSON WEB Token (JWT)
 
 # **สิ่งที่ต้องติดตั้ง**
 
@@ -32,7 +35,7 @@ npm install
 npm init -y
 ```
 
-- คำสั่งที่ใช้สร้างไฟล์ `package.json`  เป็นไฟล์ที่ใช้เก็บข้อมูลเกี่ยวกับโปรเจกต์ Node.js
+- คำสั่งที่ใช้สร้างไฟล์ `package.json` เป็นไฟล์ที่ใช้เก็บข้อมูลเกี่ยวกับโปรเจกต์ Node.js
 
 ## 1.Express
 
@@ -51,7 +54,6 @@ npm install nodemon
 - **nodemon** เป็นเครื่องมือที่ช่วยให้ Node.js **รีสตาร์ทเซิร์ฟเวอร์อัตโนมัติ** เมื่อมีการเปลี่ยนแปลงโค้ดในไฟล์ โดยไม่ต้องรันคำสั่ง `node server.js` ใหม่เองทุกครั้ง
 
 > เพิ่มคำสั่ง start ที่ไฟล์ package.json เพื่อง่ายต่อการรันคำสั่งของ nodemon
-> 
 
 ## 3.jsonwebtoken
 
@@ -140,7 +142,7 @@ npm i body-parser
 ```
 
 - `body-parser` เป็น **middleware** ใน Express.js ที่ใช้สำหรับ **แปลงข้อมูลจาก HTTP request body ให้อยู่ในรูปแบบที่ใช้งานได้** เช่น **JSON หรือ URL-encoded data**  
-ปัจจุบัน **Express.js เวอร์ชัน 4.16 ขึ้นไปมี body-parser ในตัวแล้ว** ผ่าน `express.json()` และ `express.urlencoded()`
+  ปัจจุบัน **Express.js เวอร์ชัน 4.16 ขึ้นไปมี body-parser ในตัวแล้ว** ผ่าน `express.json()` และ `express.urlencoded()`
 
 ## 3.cors
 
