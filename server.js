@@ -6,7 +6,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 // import database connection
-const connectDB = require("./Config/db");
+const connectDB = require("./config/db");
 
 // import environment variables
 require("dotenv").config();
